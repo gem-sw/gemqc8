@@ -112,8 +112,7 @@ process.load('Configuration.StandardSequences.SimL1Emulator_cff')
 process.load('Configuration.StandardSequences.EndOfProcess_cff')
 process.load('Configuration.StandardSequences.FrontierConditions_GlobalTag_cff')
 
-#process.load('Geometry.GEMGeometry.GeometryGEMCosmicStandDB_cff')
-process.load('gemqc8.Geometry.GeometryGEMCosmicStandDB_cff')
+process.load('Geometry.GEMGeometry.GeometryGEMCosmicStandDB_cff')
 
 # For debug purposes - use what is already in GEM DB
 process.GEMQC8ConfESSource.WriteDummy = cms.untracked.int32(-2) # -1 -- P5 chambers, -2 -- special case
@@ -262,7 +261,7 @@ if (options.edm):
         SelectEvents = cms.untracked.PSet(
             SelectEvents = cms.vstring('path')
         ),
-        fileName = cms.untracked.string('gem_EDM-qc8spec-runNum%i.root'%options.runNum)
+        fileName = cms.untracked.string('gem_EDM-qc8spec.root')
     )
 
     process.out = cms.EndPath(
