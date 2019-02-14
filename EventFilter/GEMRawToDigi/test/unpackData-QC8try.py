@@ -261,7 +261,7 @@ if (options.edm):
         SelectEvents = cms.untracked.PSet(
             SelectEvents = cms.vstring('path')
         ),
-        fileName = cms.untracked.string('gem_EDM-qc8spec.root')
+        fileName = cms.untracked.string('gem_EDM-qc8spec-runNum%i.root'%options.runNum)
     )
 
     process.out = cms.EndPath(
