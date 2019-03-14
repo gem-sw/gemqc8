@@ -87,7 +87,7 @@ for i in xrange(len(SuperChType)):
     if SuperChType[i]=='L' : size = 'L'
     if SuperChType[i]=='S' : size = 'S'
     if SuperChType[i]!='0' :
-    	geomFile = 'Analyzer/GEMQC8/data/gem11'+size+column_row+'.xml'
+    	geomFile = 'Analysis/GEMQC8/data/gem11'+size+column_row+'.xml'
     	print(geomFile)
     if SuperChType[i]!='0' :
     	process.XMLIdealGeometryESSource.geomXMLFiles.append(geomFile)
@@ -118,7 +118,7 @@ process.options = cms.untracked.PSet(
 ############## DB file #################
 from CondCore.CondDB.CondDB_cfi import *
 CondDB.DBParameters.authenticationPath = cms.untracked.string('/afs/cern.ch/cms/DB/conddb')
-CondDB.connect = cms.string('sqlite_fip:Analyzer/GEMQC8/data/GEMeMap.db')
+CondDB.connect = cms.string('sqlite_fip:Analysis/GEMQC8/data/GEMeMap.db')
 
 process.GEMCabling = cms.ESSource("PoolDBESSource",
     CondDB,
