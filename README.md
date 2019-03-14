@@ -11,3 +11,7 @@ scram b -j 12
 cd Analysis/GEMQC8/test
 cmsRun runGEMCosmicStand_sim.py
 ```
+or
+```bash
+cmsRun runGEMCosmicStand_data_test.py
+```
