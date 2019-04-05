@@ -5,10 +5,8 @@ cd QC8Test/src
 cmsenv
 git-cms-merge-topic jshlee:gem-vfatv3
 git clone git@github.com:hyunyong/gemqc8.git
-mv gemqc8/* .
-rm -rf gemqc8
 scram b -j 12
-cd Analysis/GEMQC8/test
+cd gemqc8/Analysis/test
 cmsRun runGEMCosmicStand_sim.py
 ```
 or
